@@ -1,11 +1,11 @@
-vector<pair<long long, long long>> prime_factorize(long long N)
+vector<pair<int, int>> primeFactorize(int N)
 {
-    vector<pair<long long, long long>> res;
-    for (long long a = 2; a * a <= N; ++a)
+    vector<pair<int, int>> res;
+    for (int a = 2; a * a <= N; ++a)
     {
         if (N % a != 0)
             continue;
-        long long ex = 0; // 指数
+        int ex = 0; // 指数
 
         // 割れる限り割り続ける
         while (N % a == 0)
